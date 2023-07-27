@@ -1,0 +1,165 @@
+$bgcolor1: #fff;
+$color1: #000;
+$font-name-1: "Inter_my";
+
+@font-face {
+  font-family: $font-name-1;
+  src: url("../../../public/accets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  src: url("../../../public/accets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+%normalized {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: $bgcolor1;
+  color: $color1;
+
+  font-family: $font-name-1;
+  font-size: 18px;
+  line-height: 1.5;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+}
+
+body {
+  @extend %normalized;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and(max-width: 601px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+%default-msg {
+  text-indent: 25px;
+  padding: 10px 10px 10px;
+  max-width: 100%;
+  @media screen and(max-width: 601px) {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.error-msg {
+  @extend %default-msg;
+  background-color: red;
+  color: $bgcolor1;
+}
+
+.success-msg {
+  @extend %default-msg;
+  background-color: aquamarine;
+  color: blue;
+}
+
+.Girls {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  min-width: 10%;
+  font-size: 0.65em;
+  flex-wrap: wrap;
+  li {
+    position: relative;
+    width: 90px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    background-color: bisque;
+    color: brown;
+    border: 1px solid #000;
+    border-radius: 5px 5px;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: all 150ms ease-in;
+    will-change: transform;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    &:hover {
+      background-color: azure;
+      color: green;
+      transform: scale(1.4) translateY(-3px);
+      filter: drop-shadow(0 0 8px rgba(#000, 0.35));
+      z-index: 3;
+    }
+    &:active {
+      background-color: red;
+      color: white;
+      transform: scale(0.75) translateY(6px);
+      filter: none;
+    }
+  }
+  @media screen and(max-width: 601px) {
+    display: block;
+    li {
+      margin-bottom: 10px;
+      width: 75px;
+      height: 40px;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: green !important;
+  font-family: $font-name-1;
+}
+
+.footer__row {
+  width: 100% !important;
+  background-color: $color1 !important;
+  font-family: $font-name-1 !important;
+}

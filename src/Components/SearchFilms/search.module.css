@@ -1,0 +1,63 @@
+.search_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_label {
+  margin-left: 10px;
+  position: relative;
+}
+
+.check_label {
+  margin-right: 20px;
+  align-self: flex-start;
+}
+.check_label > input {
+  margin-left: 5px;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.browser-default,
+.search_label > input {
+  padding: 10px 10px 10px 10px;
+  padding-right: 25px;
+  width: 100%;
+  position: relative;
+  font-size: larger;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid darkgrey;
+}
+
+.browser-default:focus,
+.search_label > input:focus {
+  border: none;
+  outline: none;
+  color: navy;
+  border-bottom: 1px solid navy;
+}
+
+.browser-default:active,
+.search_label > input:active {
+  border: none;
+  border-bottom: 1px solid navy;
+}
+
+.deleted_btn {
+  position: absolute;
+  top: 27px;
+  right: 0;
+  left: 96%;
+  opacity: 0.35;
+  cursor: pointer;
+  transition: transform 120ms ease-in-out;
+}
+
+.deleted_btn:hover {
+  opacity: 1;
+  transform: scale(1.25);
+}

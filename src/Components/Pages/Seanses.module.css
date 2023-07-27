@@ -1,0 +1,73 @@
+td {
+  transition: all 120ms ease-out;
+}
+.td_class {
+  cursor: pointer;
+  user-select: none;
+  transition: all 120ms ease-out;
+}
+
+.td_class:hover {
+  color: blue;
+  transform: translateY(-4px) scale(1.15);
+  /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1)); */
+}
+
+.td_class:hover + td {
+  color: blue;
+  transform: translateY(-4px) scale(1.15);
+}
+
+.td_class:active,
+.td_class:active + td {
+  transform: translateY(2px) scale(0.85);
+  filter: none;
+}
+
+.seansesList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.seansLink {
+  background-color: blanchedalmond;
+  color: black;
+  border-radius: 20px 20px;
+  padding: 4px 4px;
+  font-weight: 500;
+  font-size: 0.75em;
+  outline: none;
+  border: 2px solid green;
+  transition: all 100ms ease-out;
+  display: block;
+  text-align: center;
+  min-width: 90px;
+}
+
+.seansLink:hover {
+  border-radius: 20px 20px;
+  background-color: blue;
+  color: yellow;
+  transform: scale(1.25);
+}
+
+.active {
+  background-color: blue;
+  color: yellow;
+  font-size: 0.85em;
+  text-align: center;
+  /* width: 30px;
+  height: 20px; */
+  min-width: 90px;
+  padding: 4px 4px;
+  font-weight: 500;
+  overflow: hidden;
+  border-radius: 20px 20px;
+  border: 2px solid green;
+  box-shadow: 0 0 6px rgba(12, 24, 6, 0.85);
+  display: block;
+}

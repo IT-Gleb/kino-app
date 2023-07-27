@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Inter_my";
+  src: url("../../../public/accets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+  src: url("../../../public/accets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-family: "Inter_my";
+  font-size: 18px;
+  line-height: 1.5;
+}
+body a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+body h1 {
+  font-size: 3.5em;
+}
+body h2 {
+  font-size: 3em;
+}
+body h3 {
+  font-size: 2.5em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 601px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.success-msg, .error-msg {
+  text-indent: 25px;
+  padding: 10px 10px 10px;
+  max-width: 100%;
+}
+@media screen and (max-width: 601px) {
+  .success-msg, .error-msg {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.error-msg {
+  background-color: red;
+  color: #fff;
+}
+
+.success-msg {
+  background-color: aquamarine;
+  color: blue;
+}
+
+.Girls {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  min-width: 10%;
+  font-size: 0.65em;
+  flex-wrap: wrap;
+}
+.Girls li {
+  position: relative;
+  width: 90px;
+  height: 45px;
+  margin-right: 10px;
+}
+.Girls a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: block;
+  background-color: bisque;
+  color: brown;
+  border: 1px solid #000;
+  border-radius: 5px 5px;
+  cursor: pointer;
+  padding: 5px 5px;
+  transition: all 150ms ease-in;
+  will-change: transform;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.Girls a:hover {
+  background-color: azure;
+  color: green;
+  transform: scale(1.4) translateY(-3px);
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.35));
+  z-index: 3;
+}
+.Girls a:active {
+  background-color: red;
+  color: white;
+  transform: scale(0.75) translateY(6px);
+  filter: none;
+}
+@media screen and (max-width: 601px) {
+  .Girls {
+    display: block;
+  }
+  .Girls li {
+    margin-bottom: 10px;
+    width: 75px;
+    height: 40px;
+  }
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: green !important;
+  font-family: "Inter_my";
+}
+
+.footer__row {
+  width: 100% !important;
+  background-color: #000 !important;
+  font-family: "Inter_my" !important;
+}/*# sourceMappingURL=my_style.css.map */

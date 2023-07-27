@@ -1,0 +1,128 @@
+.rowRyad {
+  width: 100%;
+  min-height: 20%;
+  background-color: white;
+  display: inline-block;
+  /* align-items: center;
+    justify-content: center; */
+  border: none;
+  border-top: 4px solid black;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.cost-line {
+  background-color: #004d40;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  min-width: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ticked-Wrapped {
+  max-width: 150px;
+  max-height: 250px;
+  border: 2px solid darkred;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: transform 80ms ease-in-out;
+  display: inline-block;
+}
+
+.ticked-Wrapped + .ticked-Wrapped {
+  margin-left: 10px;
+}
+
+.ticked-Wrapped:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.85);
+  border: 2px solid yellowgreen;
+}
+
+.ticked-header {
+  width: 100%;
+  background-color: #42a5f5;
+  color: white;
+  font-size: 0.85em;
+  font-weight: 650;
+  padding: 2px 2px 2px 2px;
+  text-align: center;
+}
+
+.ticked-Body dl {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-top: 1px;
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.ticked-Body dl dt {
+  font-size: 0.9em;
+}
+
+.ticked-Body dl dd {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.ticked-Body dl:nth-child(1) dd {
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.ticked-Body dl:nth-child(2) dd {
+  font-size: 1.05em;
+  margin-left: transform(translateX(50%));
+}
+
+.ticked-footer {
+  background-color: #42a5f5;
+  width: 100%;
+  height: 10px;
+}
+
+.zakazBtn {
+  width: 100px;
+  height: 40px;
+  display: block;
+  background-color: green;
+  color: white;
+  outline: none;
+  border: 1px solid darkgreen;
+  border-radius: 20px 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 0.8em;
+  transition: transform 80ms ease-in-out;
+  margin-left: 40%;
+}
+
+.zakazBtn:hover {
+  transform: scale(1.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.zakazBtn:active {
+  transform: scale(0.85);
+}
+
+.zakazBtn:focus {
+  background-color: green;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .ticked-Body dl {
+    margin-left: 1px;
+  }
+  .ticked-Body dl dd {
+    margin-left: 2px;
+    font-size: 0.95em;
+  }
+}

@@ -1,0 +1,84 @@
+.Main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "YanoneK_my";
+  font-size: 1.65em;
+  line-height: 1.65;
+}
+
+.main-menu-item {
+  padding: 8px 8px 8px 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.main-menu-item + .main-menu-item {
+  margin-left: 10%;
+}
+
+.main-menu-item a {
+  display: inline-block;
+  color: #fafafa;
+  transition: transform 120ms ease-in-out;
+}
+
+.main-menu-item a:hover {
+  color: #ffff00;
+  transform: scale(1.07);
+  filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 1));
+}
+
+.main-menu-item a:active {
+  transform: scale(0.75);
+  filter: none;
+}
+
+#main-submenu {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+#main-submenu:hover .submenu1 {
+  display: block;
+  transform: scale(1.1);
+}
+
+.submenu1 {
+  display: none;
+  text-transform: uppercase;
+  list-style: none;
+  max-width: 200px;
+  max-height: 250px;
+  text-align: center;
+  font-size: 0.85em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  z-index: 5;
+}
+
+.submenu1-item a {
+  color: lightgoldenrodyellow;
+}
+
+.submenu1-item {
+  padding: 12px 12px 12px 12px;
+}
+
+@media screen and (max-width: 601px) {
+  .Main-menu {
+    font-size: 1em;
+    line-height: 1.2;
+  }
+  .submenu1 {
+    top: 20px;
+    left: 8px;
+  }
+}

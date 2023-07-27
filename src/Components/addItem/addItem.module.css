@@ -1,0 +1,115 @@
+.amain {
+  width: 40%;
+  background-color: bisque;
+  color: #000;
+
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 100px;
+  border-radius: 20px 20px;
+  overflow: hidden;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+
+input,
+textarea {
+  border: none;
+  background-color: #ccc;
+  color: blue;
+  font-size: inherit;
+  line-height: inherit;
+  min-width: 75%;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin: 0 auto;
+  border-radius: 10px 10px;
+}
+
+textarea:focus,
+input:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.formClass {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  gap: 10px 20px;
+  padding: 10px 10px;
+}
+
+.btn {
+  background-color: green;
+  color: white;
+  min-width: 60px;
+  min-height: 35px;
+  max-width: 120px;
+  max-height: 60px;
+  border: 1px solid #000;
+  border-radius: 10px 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  transition: transform 150ms ease-out;
+}
+
+.btn:hover {
+  background-color: brown;
+  color: yellow;
+  transform: translateY(-3px) scale(1.25);
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.9));
+}
+
+.btn:active {
+  transform: scale(0.75) translateY(6px);
+  filter: none;
+}
+
+input[type="file"] {
+  font-size: 12px;
+  border-radius: 10px 10px;
+  background-color: lightgreen;
+  color: blueviolet;
+  min-width: 125px;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px 10px;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: blue;
+  transform: translateY(-3px);
+}
+
+.statusText {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #000;
+  color: white;
+  border-radius: 20px 20px;
+}
+
+.statusText h5 {
+  text-align: center;
+  text-transform: lowercase;
+  padding: 3px 3px 3px 3px;
+  margin: 0;
+}
+
+.statusText h5::first-letter {
+  text-transform: uppercase;
+}

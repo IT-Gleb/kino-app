@@ -1,0 +1,14 @@
+.btn-floating,
+.btn {
+  transition: all 120ms ease-out;
+}
+
+.btn-floating:hover,
+.btn:hover {
+  transform: scale(1.15);
+}
+
+.btn-floating:active,
+.btn:active {
+  transform: scale(0.95);
+}

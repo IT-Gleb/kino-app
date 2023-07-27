@@ -1,0 +1,119 @@
+$fontYanoneK: "YanoneK_my";
+$bodybgColor1: #e0e0e0;
+
+@font-face {
+  font-family: $fontYanoneK;
+  // src: url("Yanone_Kaffeesatz");
+  src: url("../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf")
+    format("truetype");
+
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $bodybgColor1;
+}
+
+%myrow {
+  margin-bottom: 0 !important;
+  border: none;
+  filter: drop-shadow(0 3px 9px rgba(255, 255, 255, 0.25));
+}
+
+@mixin my-a {
+  display: block;
+  cursor: pointer;
+  transition: transform 130ms ease-out;
+  &:hover {
+    svg path {
+      fill: #81d4fa;
+    }
+    transform: translateY(-2px) scale(1.35);
+  }
+  &:active {
+    transform: translateY(5px) scale(0.75);
+    svg path {
+      fill: #81d4fa;
+    }
+  }
+}
+
+.top-row {
+  @extend %myrow;
+}
+
+h5 {
+  text-transform: uppercase;
+  span {
+    text-transform: lowercase;
+  }
+}
+
+main {
+  min-height: 100vh;
+  flex: 1 0 auto;
+}
+
+.m-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  font-family: $fontYanoneK;
+  a {
+    @include my-a;
+    margin-right: 20px;
+  }
+  h5 {
+    line-height: 80% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    span {
+      text-transform: lowercase;
+    }
+  }
+}
+
+.logo-text {
+  font-family: $fontYanoneK;
+  font-size: 1.2em;
+  line-height: 1.5;
+  h5 {
+    span {
+      // display: inline-block;
+      font-size: 0.7em;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  li + li {
+    margin-left: 8px;
+  }
+  li {
+    a {
+      @include my-a;
+    }
+  }
+}
+
+.my-row {
+  padding: 0px 0px 0px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  border: none;
+}
+
+.carousel {
+  height: inherite !important;
+  width: 100% !important;
+}

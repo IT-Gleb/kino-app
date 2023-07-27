@@ -1,0 +1,361 @@
+:root {
+  --maxwidth: 80%;
+  --transX: 14%;
+}
+
+.allRyads {
+  counter-reset: num 0;
+}
+
+.buttons--line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(127, 127, 127, 0.1);
+  padding: 3px 3px !important;
+  max-width: var(--maxwidth);
+  position: relative;
+  transform: translateX(var(--transX));
+  border-radius: 20px 20px;
+  margin-bottom: 5px;
+}
+
+.buttons--line::before {
+  counter-increment: num;
+  content: counter(num);
+  position: absolute;
+  font-size: 0.75em;
+  color: black;
+  left: 1%;
+}
+
+.buttons--line::after {
+  content: counter(num);
+  position: absolute;
+  font-size: 0.75em;
+  color: black;
+  right: 1%;
+}
+
+.mesto {
+  width: 25px;
+  height: 25px;
+  border-radius: 8px 8px;
+  background-color: aquamarine;
+  color: blue;
+  outline: none;
+  border: 1px solid grey;
+  cursor: pointer;
+  font-size: 0.75em;
+  padding: 2px 2px;
+  transition: transform 80ms ease-out;
+}
+
+.mesto + .mesto {
+  margin-left: 5px;
+}
+
+.active-mesto:nth-child(1),
+.mesto:nth-child(1) {
+  margin-left: 15px;
+}
+
+.active-mesto:nth-last-child(1),
+.mesto:nth-last-child(1) {
+  margin-right: 15px;
+}
+
+.active-mesto + .mesto {
+  margin-left: 5px;
+}
+
+.mesto + .active-mesto {
+  margin-left: 5px;
+}
+
+.mesto:hover {
+  background-color: blue;
+  color: yellow;
+  font-weight: 600;
+  transform: scale(1.35);
+  box-shadow: 0 0 8px rgba(127, 127, 127, 1);
+}
+
+.mesto:active {
+  box-shadow: none;
+  transform: scale(0.7);
+}
+
+.mesto:focus {
+  background-color: aquamarine;
+  color: blue;
+}
+
+.active-mesto {
+  width: 25px;
+  height: 25px;
+  border-radius: 8px 8px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid grey;
+  font-size: 0.75em;
+  padding: 2px 2px;
+  transition: all 80ms ease-in-out;
+}
+
+.active-mesto:hover {
+  background-color: red;
+  color: yellow;
+  font-weight: 600;
+  transform: scale(1.35);
+  box-shadow: 0 0 8px rgba(127, 127, 127, 1);
+}
+
+.active-mesto:active {
+  transform: scale(0.85);
+  background-color: aquamarine;
+  color: #000;
+}
+
+.mesto:active {
+  background-color: aquamarine;
+  color: #000;
+  transform: scale(0.85);
+}
+
+.active-mesto:focus {
+  background-color: blue;
+  color: white;
+}
+
+.active-mesto + .active-mesto {
+  margin-left: 5px;
+}
+
+.proxod {
+  max-width: var(--maxwidth);
+  height: 50px;
+  background-color: rgba(127, 127, 127, 0.25);
+  transform: translateX(var(--transX));
+  position: relative;
+}
+
+.proxod::before {
+  content: "выход";
+  writing-mode: vertical-lr;
+  text-orientation: sideways-right;
+  line-height: 0.25;
+  font-size: 1em;
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  border-right: 4px solid #000;
+  padding-right: 7px;
+  transform: rotate(180deg);
+}
+
+.proxod::after {
+  content: "в х о д";
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  line-height: 0.25;
+  font-size: 1em;
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  border-right: 4px solid #000;
+  padding-right: 5px;
+}
+
+.proxod2 {
+  max-width: var(--maxwidth);
+  height: 45px;
+  background-color: rgba(127, 127, 127, 0.25);
+  transform: translateX(var(--transX));
+  position: relative;
+}
+
+.ekran {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.ekran::before {
+  content: "";
+  width: var(--maxwidth);
+  border-top: 6px solid #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(var(--transX));
+}
+
+.ekran::after {
+  content: "";
+  width: calc(var(--maxwidth) / 2);
+  /* border: none; */
+  border-top: 16px solid #000;
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  transform: translateX(-22%);
+}
+
+.bolded {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #42a5f5;
+}
+
+.named {
+  font-family: "YanoneK_my";
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #004d40;
+}
+
+/* .rowRyad {
+  width: 100%;
+  min-height: 20%;
+  background-color: white;
+  display: inline-block;
+  border: none;
+  border-top: 4px solid black;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.cost-line {
+  background-color: #004d40;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  min-width: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ticked-Wrapped {
+  max-width: 150px;
+  max-height: 250px;
+  border: 2px solid darkred;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: transform 80ms ease-in-out;
+  display: inline-block;
+}
+
+.ticked-Wrapped + .ticked-Wrapped {
+  margin-left: 10px;
+}
+
+.ticked-Wrapped:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.85);
+  border: 2px solid yellowgreen;
+}
+
+.ticked-header {
+  width: 100%;
+  background-color: #42a5f5;
+  color: white;
+  font-size: 0.85em;
+  font-weight: 650;
+  padding: 2px 2px 2px 2px;
+  text-align: center;
+}
+
+.ticked-Body dl {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-top: 1px;
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.ticked-Body dl dt {
+  font-size: 0.9em;
+}
+
+.ticked-Body dl dd {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.ticked-Body dl:nth-child(1) dd {
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.ticked-Body dl:nth-child(2) dd {
+  font-size: 1.05em;
+  margin-left: transform(translateX(50%));
+}
+
+.ticked-footer {
+  background-color: #42a5f5;
+  width: 100%;
+  height: 10px;
+}
+
+.zakazBtn {
+  width: 100px;
+  height: 40px;
+  display: block;
+  background-color: green;
+  color: white;
+  outline: none;
+  border: 1px solid darkgreen;
+  border-radius: 20px 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 0.8em;
+  transition: transform 80ms ease-in-out;
+  margin-left: 40%;
+}
+
+.zakazBtn:hover {
+  transform: scale(1.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.zakazBtn:active {
+  transform: scale(0.85);
+}
+
+.zakazBtn:focus {
+  background-color: green;
+  color: white;
+} */
+
+@media screen and (max-width: 600px) {
+  .active-mesto,
+  .mesto {
+    width: 16px;
+    height: 16px;
+    font-size: 0.55em;
+  }
+  .buttons--line {
+    max-width: 99%;
+    transform: translateX(0);
+  }
+  .proxod {
+    max-width: 99%;
+    transform: translateX(0);
+  }
+  .proxod2 {
+    max-width: 99%;
+    transform: translateX(0);
+  }
+}
